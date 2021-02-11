@@ -22,24 +22,8 @@
     <url>https://github.com/Avicus/Grave</url>
   </scm>
 
-  <!-- Deployment -->
-  <distributionManagement>
-    <repository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <repositories>
-    <!-- PaperSpigot -->
-    <repository>
-      <id>avicus-public</id>
-      <url>https://repo.avicus.net/content/groups/public/</url>
-    </repository>
+
   </repositories>
 
   <dependencies>
@@ -53,8 +37,8 @@
 
     <!-- Magner -->
     <dependency>
-      <groupId>net.avicus</groupId>
-      <artifactId>magnet-api</artifactId>
+      <groupId>app.ashcon</groupId>
+      <artifactId>sportpaper-api</artifactId>
       <version>1.8.8-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
@@ -70,7 +54,7 @@
     <dependency>
       <groupId>tc.oc</groupId>
       <artifactId>tracker</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.8-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

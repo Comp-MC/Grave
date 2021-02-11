@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.avicus</groupId>
   <artifactId>grave</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.8-SNAPSHOT</version>
   <scm>
     <connection>scm:git://github.com/Avicus/Grave.git</connection>
     <developerConnection>scm:git:ssh://github.com/Avicus/Grave.git</developerConnection>
@@ -43,12 +41,6 @@
       </plugin>
     </plugins>
   </build>
-  <repositories>
-    <repository>
-      <id>avicus-public</id>
-      <url>https://repo.avicus.net/content/groups/public/</url>
-    </repository>
-  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -57,11 +49,15 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>net.avicus</groupId>
-      <artifactId>magnet-api</artifactId>
+      <groupId>app.ashcon</groupId>
+      <artifactId>sportpaper-api</artifactId>
       <version>1.8.8-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
       <exclusions>
+        <exclusion>
+          <artifactId>jsr305</artifactId>
+          <groupId>com.google.code.findbugs</groupId>
+        </exclusion>
         <exclusion>
           <artifactId>commons-lang</artifactId>
           <groupId>commons-lang</groupId>
@@ -87,20 +83,20 @@
           <groupId>org.yaml</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>bungeecord-chat</artifactId>
-          <groupId>net.md-5</groupId>
+          <artifactId>BungeeCord</artifactId>
+          <groupId>com.github.Electroid</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
       <groupId>tc.oc</groupId>
       <artifactId>tracker</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.8-SNAPSHOT</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
-          <artifactId>paperspigot</artifactId>
-          <groupId>com.github</groupId>
+          <artifactId>minecraft-api</artifactId>
+          <groupId>net.avicus</groupId>
         </exclusion>
         <exclusion>
           <artifactId>guava</artifactId>
@@ -109,16 +105,6 @@
       </exclusions>
     </dependency>
   </dependencies>
-  <distributionManagement>
-    <repository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
   <properties>
     <plugin.name>Grave</plugin.name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
