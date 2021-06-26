@@ -23,7 +23,10 @@
   </scm>
 
   <repositories>
-
+    <repository>
+      <id>ashcon</id>
+      <url>https://repo.ashcon.app/content/repositories/snapshots</url>
+    </repository>
   </repositories>
 
   <dependencies>
